@@ -11,7 +11,7 @@ interface SupertestLinkOptions {
 
 export const supertestLink = (app: App, options: SupertestLinkOptions) => {
   const supertestRequester: Requester = requesterOptions => {
-    const input = requesterOptions['input'] as any
+    const input = requesterOptions.runtime.combinedTransformer.input.serialize(requesterOptions['input'] as any)
 
     const promise = new Promise<HTTPResult>((resolve, reject) => {
       const method = requesterOptions.type === 'query' ? 'get' : 'post'
