@@ -1,6 +1,6 @@
 # trpc-supertest
 
-[WIP] A trpc link for supertest requests
+A trpc link for supertest requests
 
 
 ## Usage
